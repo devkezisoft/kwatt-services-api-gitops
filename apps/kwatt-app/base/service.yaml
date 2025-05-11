@@ -2,12 +2,11 @@ apiVersion: v1
 kind: Service
 metadata:
   name: kwatt-app
+  namespace: kwatt-dev
 spec:
+  type: LoadBalancer
   selector:
     app: kwatt-app
   ports:
-    - protocol: TCP
-      port: 80
+    - port: 80
       targetPort: 8080
-  type: ClusterIP
-

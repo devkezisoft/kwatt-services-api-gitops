@@ -17,4 +17,5 @@ module "dev_cluster" {
   ghcr_username  = var.ghcr_username
   ghcr_pat       = var.ghcr_pat
   ghcr_email     = var.ghcr_email
+  private_network_id = var.scaleway_private_network_id
 }

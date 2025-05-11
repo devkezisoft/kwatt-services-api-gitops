@@ -1,5 +1,6 @@
 variable "name" {}
 variable "region" {}
+variable "private_network_id" {}
 variable "zone" {}
 variable "node_type" { default = "DEV1-M" }
 variable "node_count" { default = 1 }
@@ -16,4 +17,3 @@ variable "app_revision" { default = "master" }
 variable "ghcr_username" {}
 variable "ghcr_pat" {}
 variable "ghcr_email" {}
-variable "scaleway_private_network_id" {}

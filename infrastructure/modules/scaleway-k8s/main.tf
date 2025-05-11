@@ -3,6 +3,7 @@ resource "scaleway_k8s_cluster" "this" {
   version  = var.k8s_version
   region   = var.region
   cni      = "cilium"
+  delete_additional_resources = false
 }
 
 resource "scaleway_k8s_pool" "this" {
@@ -10,6 +11,7 @@ resource "scaleway_k8s_pool" "this" {
   node_type  = var.node_type
   size       = var.node_count
   zone       = var.zone
+  name       = "scaleway_k8s_pool"
 }
 
 resource "local_file" "kubeconfig" {

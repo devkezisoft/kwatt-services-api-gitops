@@ -1,0 +1,9 @@
+scaleway_access_key = "sk_..."
+scaleway_secret_key = "..."
+scaleway_project_id = "..."
+scaleway_region     = "fr-par"
+scaleway_zone       = "fr-par-1"
+
+ghcr_username = "tonuser"
+ghcr_pat      = "ghp_xxx"
+ghcr_email    = "you@example.com"

@@ -4,6 +4,7 @@ resource "scaleway_k8s_cluster" "this" {
   region   = var.region
   cni      = "cilium"
   delete_additional_resources = false
+  private_network_id = var.scaleway_private_network_id
 }
 
 resource "scaleway_k8s_pool" "this" {
@@ -12,6 +13,10 @@ resource "scaleway_k8s_pool" "this" {
   size       = var.node_count
   zone       = var.zone
   name       = "scaleway_k8s_pool"
+  min_size = 2
+  max_size = 3
+  autoscaling = true
+  autohealing = true
 }
 
 resource "local_file" "kubeconfig" {

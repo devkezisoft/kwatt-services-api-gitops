@@ -16,3 +16,4 @@ variable "app_revision" { default = "master" }
 variable "ghcr_username" {}
 variable "ghcr_pat" {}
 variable "ghcr_email" {}
+variable "scaleway_private_network_id" {}

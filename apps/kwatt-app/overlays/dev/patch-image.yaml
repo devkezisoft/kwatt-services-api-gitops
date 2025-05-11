@@ -7,4 +7,4 @@ spec:
     spec:
       containers:
         - name: kwatt-app
-          image: ghcr.io/devkezisoft/kwatt-app:0.0.2-SNAPSHOT
+          image: ghcr.io/devkezisoft/kwatt-app:0.0.3-SNAPSHOT

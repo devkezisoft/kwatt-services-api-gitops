@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: kwatt-app
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: kwatt-app
+  template:
+    metadata:
+      labels:
+        app: kwatt-app
+    spec:
+      containers:
+        - name: kwatt-app
+          image: ghcr.io/devkezisoft/kwatt-app:latest
+          ports:
+            - containerPort: 8080

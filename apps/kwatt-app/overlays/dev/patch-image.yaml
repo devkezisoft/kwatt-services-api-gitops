@@ -1,0 +1,10 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: kwatt-app
+spec:
+  template:
+    spec:
+      containers:
+        - name: kwatt-app
+          image: ghcr.io/devkezisoft/kwatt-app:latest

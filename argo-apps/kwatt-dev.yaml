@@ -1,0 +1,18 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: kwatt-dev
+  namespace: argocd
+spec:
+  project: default
+  source:
+    repoURL: https://github.com/devkezisoft/kwatt-services-api-gitops
+    path: apps/kwatt-app/overlays/dev
+    targetRevision: main
+  destination:
+    server: https://kubernetes.default.svc
+    namespace: kwatt-dev
+  syncPolicy:
+    automated:
+      prune: true
+      selfHeal: true

@@ -4,7 +4,6 @@ resource "scaleway_k8s_cluster" "this" {
   region   = var.region
   cni      = "cilium"
   delete_additional_resources = false
-  private_network_id = var.private_network_id
 }
 
 resource "scaleway_k8s_pool" "this" {

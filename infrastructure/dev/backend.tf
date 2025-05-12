@@ -1,9 +1,11 @@
 terraform {
-  backend "remote" {
-    organization = "devkezisoft"
+  backend "s3" {
+    bucket  = "kwatt-terraform-state"
+    key     = "dev/terraform.tfstate"
+    region  = "fr-par"
+    endpoint = "https://kwatt-terraform-state.s3.fr-par.scw.cloud"
 
-    workspaces {
-      name = "kwatt-dev"
-    }
+    skip_credentials_validation = true
+    skip_metadata_api_check     = true
   }
 }

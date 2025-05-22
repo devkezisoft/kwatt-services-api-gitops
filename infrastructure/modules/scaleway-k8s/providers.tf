@@ -4,15 +4,12 @@ terraform {
   required_providers {
     scaleway = {
       source  = "scaleway/scaleway"
-      version = "~> 2.54.0"
     }
     local = {
       source  = "hashicorp/local"
-      version = "~> 2.5"
     }
     null = {
       source  = "hashicorp/null"
-      version = "~> 3.2"
     }
   }
   }
